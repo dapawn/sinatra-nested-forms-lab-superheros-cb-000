@@ -1,21 +1,21 @@
-class Ship
-  attr_reader :name, :type, :booty
+class Hero
+  attr_reader :name, :power, :bio
 
-  @@ships = []
+  @@heros = []
 
   def initialize(params)
     @name = params[:name]
-    @type = params[:type]
-    @booty = params[:booty]
-    @@ships << self
+    @power = params[:power]
+    @bio = params[:bio]
+    @@heros << self
   end
 
   def self.all
-    @@ships
+    @@heros
   end
 
   def self.clear
-    @@ships = []
+    @@heros = []
   end
 
 end
