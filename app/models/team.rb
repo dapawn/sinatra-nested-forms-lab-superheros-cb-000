@@ -1,21 +1,20 @@
-class Pirate
-  attr_reader :name, :weight, :height
+class Team
+  attr_reader :name, :moto
 
-  @@pirates = []
+  @@teams = []
 
   def initialize(params)
     @name = params[:name]
-    @weight = params[:weight]
-    @height = params[:height]
-    @@pirates << self
+    @moto = params[:moto]
+    @@teams << self
   end
 
   def self.all
-    @@pirates
+    @@teams
   end
 
   def self.clear
-    @@pirates = []
+    @@teams = []
   end
 
 end
